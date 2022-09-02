@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .progress
+        {
+            height: 30px;
+            width: 400px;
+            box-shadow: inset 0 0 10px silver;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .percent
+        {
+            height: 100%;
+            width: 80%;
+            background-color: green;
+            background-image: linear-gradient(45deg, rgb(255, 255, 255, 0.10) 25%, transparent 25%, transparent 50%, rgb(255, 255, 255, 0.10) 50%, rgba(255, 255, 255, 0.10) 75%, transparent 75%, transparent 100%);
+            background-size: 40px 40px;
+            animation: progressbar 2s infinite linear;
+        }
+        @keyframes progressbar
+        {
+            form
+            {
+               background-position: 0; 
+            }
+            to
+            {
+                background-position: -100px;
+            }
+        }
+        .progress1
+        {
+            height: 30px;
+            width: 400px;
+            box-shadow: inset 0 0 10px silver;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+            position: absolute;
+            bottom: 37em;
+        }
+        .percent1
+        {
+            height: 100%;
+            width: 50%;
+            background-color: rgba(243, 45, 45, 0.751);
+            background-image: linear-gradient(45deg, rgb(255, 255, 255, 0.10) 25%, transparent 25%, transparent 50%, rgb(255, 255, 255, 0.10) 50%, rgba(255, 255, 255, 0.10) 75%, transparent 75%, transparent 100%);
+            background-size: 40px 40px;
+            animation: progressbar1 2s infinite linear;
+        }
+        @keyframes progressbar1
+        {
+            form
+            {
+               background-position: 0; 
+            }
+            to
+            {
+                background-position: -100px;
+            }
+        }
+        .progbar
+        {
+            width: 40px;
+            height: 30px;
+            background-color: black;
+            color: #fff;
+            position: absolute;
+            bottom: 633px;
+            left: 188px;
+        }
+        span
+        {
+            position: absolute;
+            left: 10px;
+            bottom: 7px;
+        }
+        .progbar1
+        {
+            width: 10px;
+            height: 20px;
+            position: absolute;
+            bottom: 632px;
+            left: 197px;
+            font-size: xx-large;
+        }
+        .progbar2
+        {
+            width: 18px;
+            height: 26px;
+            background-color: rgb(255, 204, 0);
+            position: absolute;
+            bottom: 635px;
+            left: 229px;
+        }
+        .progbar3
+        {
+            position: absolute;
+            bottom: 640px;
+            left: 228px;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress">
+        <div class="percent"></div>
+    </div>
+    <div class="progress1">
+        <div class="percent1"></div>
+    </div>
+    <div class="progbar1">
+        &hearts;
+    </div>
+    <div class="progbar">
+        <span>10</span>
+    </div>
+    <div class="progbar2">
+        
+    </div>
+    <div class="progbar3">
+        &permil;
+    </div>
+</body>
+</html>
