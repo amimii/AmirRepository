@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul
+        {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            color: silver;
+            counter-reset: stepprogrees 0;
+        }
+        ul li
+        {
+            flex: 1 0;
+            text-align: center;
+            position: relative;
+            counter-increment: stepprogrees 1;
+        }
+        ul li::before
+        {
+            content: counter(stepprogrees);
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid silver;
+            display: block;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        ul li::after
+        {
+            content: ' ';
+            height: 2px;
+            width: 100%;
+            position: absolute;
+            background-color: silver;
+            top: 15px;
+            left: 50%;
+            z-index: -1;
+        }
+        ul li:last-child::after
+        {
+            content: none;
+        }
+        ul li.activ
+        {
+            color: green;
+        }
+        ul li.activ::before
+        {
+            background-color: green;
+            border-color: green;
+            color: #fff;
+        }
+        ul li.activ::after
+        {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="activ">Step 1</li>
+        <li class="activ">Step 2</li>
+        <li class="activ">Step 3</li>
+        <li>Step 4</li>
+        <li>Step 5</li>
+    </ul>
+</body>
+</html>
